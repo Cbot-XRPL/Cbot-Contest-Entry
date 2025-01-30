@@ -73,6 +73,7 @@ These are the number keys to param data stored in hook state. When debuging and 
 - URI: ipfs://bafybeieoyz3sghr27ybimhssgahaba5of6anmldjjtmufsxen22gmenjl4/2534.json
 - NUM: 01
 - DEL: 01
+- ROY: 01
 
 
  **Example:** of params to add after they have been hexxed. Number to unit64 and URI to string. (HINT: when using the hook builder you dont HEX the param names only the input feilds)
@@ -83,6 +84,7 @@ These are the number keys to param data stored in hook state. When debuging and 
 - 555249: 697066733A2F2F62616679626569656F797A337367687232377962696D687373676168616261356F6636616E6D6C646A6A746D75667378656E3232676D656E6A6C342F323533342E6A736F6E
 - 4E554D: 0000000000000001
 - 44454C: 0000000000000001
+- 726F79: 524F59414C5459
 
 
  **Example:** On chain submission adding the URI and its NUM. (HINT: you must add the URIL before adding any URIs. Having the correct URI lenght setting is imperative.)
@@ -118,7 +120,7 @@ The Hookhash is AC77D68A99C6433CC9507FA9D6FCD32FBF4DB1EDF757EB73950606FE08CF269E
 
 2. Or you can do it sending the transaction below:
 
-Set the hook to activate (HookOn) is when a Invoke, Payment and URIToken_Buy transaction happens. You can verify iyour HookOn value (0xfffffffffffffffffffffffffffffffffffffff7ffffffffffffffffffbffffe) in this website: [Richards Hook On Calc](https://richardah.github.io/xrpl-hookon-calculator/)
+Set the hook to activate (HookOn) is when a Invoke or a payment happens. You can verify iyour HookOn value (0xfffffffffffffffffffffffffffffffffffffff7ffffffffffffffffffbffffe) in this website: [Richards Hook On Calc](https://richardah.github.io/xrpl-hookon-calculator/)
 
     const prepared = {
       "TransactionType": "SetHook",
