@@ -6,17 +6,17 @@
 
 ## Project Details 🛠
 
-- [ ] **Included Project Files (code, documentation, etc.)**
-- [ ] **Detailed `README.md` file containing:**
+- [X] **Included Project Files (code, documentation, etc.)**
+- [X] **Detailed `README.md` file containing:**
 
   - **Project Description**
-This hook is designed to autonomously distribute URI Tokens (RWA or NFT) based on the Xahau hook rule engine. This hook could potentially replace a transfer agent, allowing users a secure way to get assets without a broker. This hook will allow you to register unique assets in hook state for distribution at a Xahau address. Some potential assets that could be distributed based on this hook are art, real estate, tickets, and digital products. You can find our Xahau Art Vault example of this hook on Mainnet at [address] and our Concert Rental Tickets on testnet installed at [address]
+This hook is designed to autonomously distribute URI Tokens (RWA or NFT) based on the Xahau hook rule engine. This hook could potentially replace a transfer agent, allowing users a secure way to get assets without a broker. This hook will essentially allow you to register unique assets for distribution at a Xahau address. Some potential assets that could be distributed based on this hook are art, real estate, tickets, and digital products. This hook is complaint with current NFT standard XLS-53 and will work with the upcoming Bidds marketplace. If you want roytlies paid on your sales you will also need Broker || Royalty hook when it become available. You can find an example of this hook on Mainnet at [address] and our Concert Rental Tickets on testnet installed at [address]. These exampkes are going online before Febuary 1st.
 
   - **Instructions on How to Use the Project**
   The hook is installed on an account. The length of your URIs (in bytes) set through a parameter called URIL. URIs and their NUM can be added or removed from the hook state via invoke transactions. It is crucial that all URIs have the exact same length, as this consistency is key to the hook's functionality (more details on this below). You must also specify the cost to charge users for minting a URI token. This hook includes an optional lock system, allowing a passkey to be set to gate the "HOOK ON" functionality. The primary function of this hook is triggered when a payment is sent to the account where it is installed. Upon activation, the hook checks a ruleset, mints a URI token, and sends it to the payee's account. The URI tokens are minted in the order they are numbered with the NUM param. Upon completion of the URI token mint the assocated URI and NUM key are deleted from hook state.
 
   - **Integration Details for Xahau Hooks - if used**
-This project is a new hook for Xahau. This URI Token Remit hook is essentially the NFT minting contract EVM uses to distribute NFTs but with special features only hooks can provide.
+This project is a new hook for Xahau. This URI Token Remit hook is essentially the NFT minting contract EVM uses to distribute NFTs but with special features only hooks can provide. This hook has zero depencys and is built to on
 The lock feature demonstrates Xahau Hooks' unique ability to gate incoming transactions. It works by allowing the hook owner to set a six-digit passcode. If the passcode is not submitted with the payment as a parameter and the lock has been enabled by the hook owner, the hook will reject the payment. This feature is particularly useful for commercial implementations that require gating asset distribution to qualified investors or buyers.
 ## How to Use the Project 🚀
 
@@ -52,13 +52,14 @@ These are the number keys to param data stored in hook state. When debuging and 
 |COST|999997| 00000000000F423D|
 |LOCK|999996| 00000000000F423C|
 |COUNT|999995| 00000000000F423B|
+|ROY|ROYALTY| 524F59414C5459|
 
 ### Hook Install
 Detailed hook install information will be available in the README.MD.
 
 ## Integration with Xahau Hooks 🔗
 
-This project is a new hook for Xahau. This URI Token Remit hook is essentially the NFT minting contract EVM uses to distribute NFTs but with special features only hooks can provide.
+This project is a new hook for Xahau. This URI Token Remit hook is essentially the NFT minting contract EVM uses to distribute NFTs but with special features only hooks can provide. This hook has no dependency to function it can live on address and be loaded with invokes. Users can send payments and according to rules it will give them assets. The hook has serveral customizations in a low requirement package to make it functional as possible for testing and eventual commerical use. With the current features it cost 0.004 XAH to fire (with editing much less) but it does not require any other hooks, applications, ect to function. For just a few XAH you can load up and fire off thousands of assets.
 
 ## Mandatory Tweets 🐦
 
