@@ -68,10 +68,10 @@ Submissions will be shared and amplified by the @XahauNetwork account, giving yo
 
   - **Link to Tweet:** [https://x.com/Cbot_Xrpl/status/1878540427587907898]
 
-- [ ] **Second Mandatory Tweet** upon submission for final review:
+- [X] **Second Mandatory Tweet** upon submission for final review:[https://x.com/Cbot_Xrpl/status/1884884149036552385]
 
-  - **Link to Tweet:** [Insert the link to your submission tweet here]
-
+  - **Link to Tweet:*
+  - 
   **Example Tweet:**
   > We have submitted [Project Name] to the Build on Xahau contest, see our submission here: [PR Link]
 
